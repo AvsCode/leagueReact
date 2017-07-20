@@ -1,7 +1,6 @@
 const controller = require("./routeController.js");
 
 function serverRouter(app){
-    app.get("/", controller.default);
+    app.get("/champions", controller.getChampions);
 }
-
 module.exports = serverRouter;
