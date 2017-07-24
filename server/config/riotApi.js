@@ -1,4 +1,4 @@
-const apiKey = require("./config/secrets.js");
+const apiKey = require("./secrets.js");
 const request = require("request");
 let url = `https://na1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&tags=all&dataById=false&api_key=${apiKey}`;
 

@@ -1,11 +1,5 @@
-class landingPage extends React.Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return(
-      <h1>Hello World</h1>
-    )
-  }
-}
-ReactDOM.render(<landingPage/>, document.getElementById("app"));
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App.jsx";
+
+ReactDOM.render(<App/>, document.getElementById("app"));
