@@ -1,11 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App.jsx";
-import Router from 'react-router';
-import {
-    BrowserRouter,
-    Route,
-    Link
-} from 'react-router-dom';
+import 'babel-polyfill';
+import React from 'react';
+import ReactDOM from'react-dom';
+import {Provider} from 'react-redux';
+import App from './App.jsx';
+import configureStore from './store/configureStore.js'
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-ReactDOM.render(<BrowserRouter><App/></BrowserRouter>, document.getElementById("app"));
+const store = configureStore();
+
+ReactDOM.render(
+    <Provider store={store}>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+    </Provider>,
+     document.getElementById("app"));

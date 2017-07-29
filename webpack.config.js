@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './client/index.js',
+    entry: ['babel-polyfill', './client/index.js'],
     output: {
         filename:'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -14,7 +14,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env', 'react']
+                        presets: ['env', 'react', 'stage-2', 'stage-3']
                     }
                 }
             },
@@ -24,7 +24,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env', 'react']
+                        presets: ['env', 'react', 'stage-2', 'stage-3']
                     }
                 }
             },
