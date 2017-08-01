@@ -3,4 +3,3 @@ node_modules
 example.json
 riotApiAllChampsResponse.json
 dist
-dist/bundle.js

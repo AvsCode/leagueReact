@@ -1,39 +1,40 @@
 {
-    "name": "leaguereact",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js",
-        "build": "webpack",
-        "wbuild": "webpack --config webpack.config.dev.js -d --watch"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "babel-polyfill": "^6.23.0",
-        "babel-preset-stage-2": "^6.24.1",
-        "express": "^4.15.3",
-        "react": "^15.6.1",
-        "react-dom": "^15.6.1",
-        "react-redux": "^5.0.5",
-        "react-router-dom": "^4.1.2",
-        "redux": "^3.7.2",
-        "redux-immutable-state-invariant": "^2.0.0",
-        "redux-thunk": "^2.2.0",
-        "remote-redux-devtools": "^0.5.12",
-        "request": "^2.81.0",
-        "request-promise": "^4.2.1"
-    },
-    "devDependencies": {
-        "babel-core": "^6.25.0",
-        "babel-loader": "^7.1.1",
-        "babel-preset-env": "^1.6.0",
-        "babel-preset-react": "^6.24.1",
-        "remote-redux-devtools": "^0.5.12",
-        "webpack": "^3.3.0",
-        "webpack-dev-server": "^2.6.1"
-    }
+  "name": "leaguereact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "webpack",
+    "wbuild": "webpack --config webpack.config.dev.js -d --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "express": "^4.15.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.2",
+    "redux": "^3.7.2",
+    "redux-immutable-state-invariant": "^2.0.0",
+    "redux-thunk": "^2.2.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "devtools": "0.0.0",
+    "redux": "^3.7.2",
+    "remote-redux-devtools": "^0.5.12",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.6.1"
+  }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import request from 'request';
 
 export default class App extends React.Component{
   constructor(props){
