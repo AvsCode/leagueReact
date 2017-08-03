@@ -5,7 +5,9 @@ class asyncActions{
     getAllChampions(){
         return function(dispatch){
             return apiCaller.getAllChampions().then((res) => {
-                dispatch(champActions.getAllChampions(JSON.parse(res)));
+                let parsedReturn = JSON.parse(res);
+                dispatch(champActions.getAllChampions({champions: parsedReturn.data,
+                champNames: parsedReturn.champNames}));
             });
         }
     }

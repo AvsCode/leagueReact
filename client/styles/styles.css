@@ -1,0 +1,6 @@
+.champion{
+    width: 30%;
+    background-color: darkgray;
+    border: 2px solid black;
+    border-radius: 5px;
+}

@@ -9,6 +9,7 @@ import champPage from './components/champPage.js';
 import itemPage from './components/itemPage.js';
 import configureStore from './store/configureStore.js'
 import asyncActions from './actions/asyncActions.js';
+import css from './styles/styles.css';
 
 const store = configureStore({});
 
