@@ -27,13 +27,6 @@ class riotApi{
         });
     }
     buildChampionImageUrls(){
-        // console.log(this.champData.keys);
-        // Getting an array of all champion names for use in building image URLs
-        // let champKeys = Object.keys(this.champData.keys);
-        // let champNames = champKeys.map((key) =>{
-        //     return this.champData.keys[key];
-        // });
-
         /*For every champion in the names array (all the champions) we will add a smallImage property, which is just a string a splash Art array of strings and a loadingArt array of strings for all the different skins of the champion */
         this.champData.champNames.map((name) => {
             // getting each individual champ in our champData object
@@ -41,7 +34,7 @@ class riotApi{
             champ.smallImage = `https://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/${name}.png`;
 
             champ.splashArt = champ.skins.map((skin) => {
-                return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_${skin.num.jpg}`;
+                return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_${skin.num}.jpg`;
             });
             champ.loadingArt = champ.skins.map((skin) => {
                 return `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_${skin.num}.jpg`;

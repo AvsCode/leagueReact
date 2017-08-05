@@ -2,7 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import champActions from '../actions/champActions';
+import viewActions from '../actions/viewActions';
 import Champ from "./champPage/champ";
+import ChampSelector from './champPage/champSelector';
 
 class ChampPage extends React.Component{
     constructor(props){
@@ -10,8 +12,8 @@ class ChampPage extends React.Component{
         this.StateFlagger = false;
     }
 
-    stateChecker(){
-        if(this.props.champions.champions){
+    checkState(){
+        if(this.props.champions){
             this.StateFlagger = true;
         }
         else{
@@ -19,33 +21,40 @@ class ChampPage extends React.Component{
         }
     }
 
-    champBuilder(){
-        return this.props.champions.champNames.map((name) => {
-            return <Champ image={this.props.champions.champions[name].smallImage}
-            name={this.props.champions.champions[name].name} />;
+    buildChamps(){
+        this.props.champNames.sort();
+        console.log(this.props);
+        return this.props.champNames.map((name) => {
+            return <Champ key={name} image={this.props.champions[name].smallImage}
+                name={this.props.champions[name].name} />;
         });
     }
 
     render(){
-        this.stateChecker();
+        this.checkState();
         if(!this.StateFlagger){
             return(<div></div>)
         }
         return(
             <div>
-                {this.champBuilder()}
+                <ChampSelector options={this.props.view.selectOptions}/>
+                {this.buildChamps()}
             </div>
         );
     }
 }
 
 function mapStateToProps(state, ownProps){
-    return state;
+    return {
+        champions : state.champions.champions,
+        champNames: state.champions.champNames,
+        view: state.view
+    };
 }
 
 function mapDispatchToProps(dispatch){
     return{
-        actions: bindActionCreators(champActions, dispatch)
+        actions: bindActionCreators({champActions, viewActions}, dispatch)
     }
 }
 

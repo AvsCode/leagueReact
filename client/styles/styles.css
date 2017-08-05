@@ -1,6 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 90%;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
 .champion{
-    width: 30%;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    margin: 10px 10px;
+    vertical-align: top;
     background-color: darkgray;
     border: 2px solid black;
     border-radius: 5px;
+    box-shadow: 0 0 5px black;
+}
+.champion:hover{
+    box-shadow: inset 0 0 15px black;
+}
+
+.champion img{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.briefDescription{
+    text-align: center;
 }
