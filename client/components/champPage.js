@@ -1,15 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import champActions from '../actions/champActions';
-import viewActions from '../actions/viewActions';
+import champActions from '../actions/champActions.js';
+import viewActions from '../actions/viewActions.js';
 import Champ from "./champPage/champ";
 import ChampSelector from './champPage/champSelector';
+
 
 class ChampPage extends React.Component{
     constructor(props){
         super(props);
         this.StateFlagger = false;
+        this.filterChamps = this.filterChamps.bind(this);
     }
 
     checkState(){
@@ -23,11 +25,15 @@ class ChampPage extends React.Component{
 
     buildChamps(){
         this.props.champNames.sort();
-        console.log(this.props);
         return this.props.champNames.map((name) => {
             return <Champ key={name} image={this.props.champions[name].smallImage}
                 name={this.props.champions[name].name} />;
         });
+    }
+
+    filterChamps(optionValue){
+      console.log(optionValue);
+      this.props.actions.viewActions(optionValue);
     }
 
     render(){
@@ -37,7 +43,7 @@ class ChampPage extends React.Component{
         }
         return(
             <div>
-                <ChampSelector options={this.props.view.selectOptions}/>
+                <ChampSelector change={this.filterChamps} options={this.props.view.selectOptions}/>
                 {this.buildChamps()}
             </div>
         );
