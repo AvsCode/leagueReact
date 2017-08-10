@@ -8,7 +8,7 @@ export default class ItemPage extends React.Component{
   }
   render(){
     return(
-      <h1>Hello from Items</h1>
+      <h1>This page is under construction</h1>
     );
   }
 }

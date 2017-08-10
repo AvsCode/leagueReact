@@ -1,11 +1,40 @@
 *{
     padding: 0;
     margin: 0;
+    background-color: black;
 }
 body{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     font-family: sans-serif;
+    color: white;
+}
+.nav{
+    height: 40px;
+    width: 100%;
+    background-color: lightgray;
+    color: white;
+}
+.nav a{
+    line-height: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: lightgray;
+    color: white;
+}
+.nav a:hover{
+    background-color: gray;
+}
+.champSelector{
+    display: block;
+}
+.champSelector *{
+    font-size: 20px;
+    color: white;
 }
 .champion{
     display: inline-block;
@@ -13,20 +42,51 @@ body{
     width: 200px;
     margin: 10px 10px;
     vertical-align: top;
-    background-color: darkgray;
-    border: 2px solid black;
+    background-color: #312b90;
+    border: 2px solid white;
     border-radius: 5px;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 15px white;
 }
 .champion:hover{
-    box-shadow: inset 0 0 15px black;
+    box-shadow: inset 0 0 15px white;
 }
-
+.champion:hover img{
+    height: 130px;
+    width: 130px;
+    margin-top: 15px;
+    margin-left: 35px;
+}
 .champion img{
     margin-top: 20px;
     margin-left: 40px;
 }
-
+.champion *{
+    background-color: transparent;
+}
+/*.fighter{
+    background-color: #b58732;
+}
+.mage{
+    background-color: #2121a0;
+}
+.assassin{
+    background-color: gray;
+}
+.tank{
+    background-color: brown;
+}
+.support{
+    background-color: green;
+}
+.marksman{
+    background-color: red;
+}*/
 .briefDescription{
     text-align: center;
+    font-size: 18px;
+    color: white;
+}
+.championTags{
+    text-align: center;
+    color: white;
 }

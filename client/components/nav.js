@@ -7,7 +7,7 @@ export default class Nav extends React.Component{
   }
   render(){
     return(
-        <div>
+        <div className="nav">
             <Link to="/">Champions</Link>
             <Link to="/items">Items</Link>
         </div>

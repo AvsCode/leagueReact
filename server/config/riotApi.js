@@ -31,7 +31,7 @@ class riotApi{
         this.champData.champNames.map((name) => {
             // getting each individual champ in our champData object
             let champ = this.champData.data[name];
-            champ.smallImage = `https://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/${name}.png`;
+            champ.smallImage = `https://ddragon.leagueoflegends.com/cdn/7.15.1/img/champion/${name}.png`;
 
             champ.splashArt = champ.skins.map((skin) => {
                 return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_${skin.num}.jpg`;
