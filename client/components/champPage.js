@@ -59,7 +59,9 @@ class ChampPage extends React.Component{
             return(
                 <div>
                     <ChampSelector change={this.filterChamps} options={this.props.view.selectOptions}/>
-                    {this.buildChamps()}
+                    <div id='champContainer'>
+                      {this.buildChamps()}
+                    </div>
                 </div>
             );
         }
