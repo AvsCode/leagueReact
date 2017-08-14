@@ -30,19 +30,19 @@ body{
     background-color: gray;
 }
 .champSelector{
-    display: block;
+    display: inline-block;
 }
 .champSelector *{
     font-size: 20px;
     color: white;
 }
+.champSearch{
+    display: inline-block;
+    color: white;
+}
 #champContainer {
   width: 95%;
   margin: 0 auto;
-}
-.championContainer{
-  width: 1220;
-  height: 720px;
 }
 .champion{
     display: inline-block;
@@ -79,4 +79,38 @@ body{
 .championTags{
     text-align: center;
     color: white;
+}
+.championContainer{
+  width: 1220px;
+  margin: 0 auto;
+}
+.carousel {
+    position: relative;
+    width: 1220px;
+}
+.carousel img{
+    z-index: 1;
+}
+.carouselLeft{
+    position: absolute;
+    left: 5%;
+    bottom: 45%;
+    width: 60px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+}
+.carouselRight{
+    position: absolute;
+    right: 5%;
+    bottom: 45%;
+    width: 60px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+}
+.skinName{
+    position: absolute;
+    top: 5%;
+    background: transparent;
 }

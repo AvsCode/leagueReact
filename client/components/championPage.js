@@ -1,15 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Carousel from './championPage/carousel.js';
+import ChampionStats from './championPage/championStats.js';
 
 class ChampionPage extends React.Component{
   constructor(props){
     super(props);
   }
+
   render(){
       console.log(this.props);
     return(
-        <div className='championContainer' style={{backgroundImage:  `url(${this.props.champion.splashArt[0]})`}}>
+        <div className='championContainer'>
+            <Carousel skins={this.props.champion.skins} images={this.props.champion.splashArt}/>
             <h1>{this.props.champion.name}</h1>
+            <ChampionStats stats={this.props.champion.stats} />
         </div>
     );
   }

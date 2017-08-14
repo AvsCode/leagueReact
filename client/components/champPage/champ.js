@@ -7,12 +7,10 @@ export default class Champ extends React.Component{
         super(props);
         this.handleChange = this.handleChange.bind(this);
     }
-
     buildTags(){
         return this.props.tags.map((tag) => `${tag} `);
     }
     handleChange(){
-        console.log(this.props);
         this.props.clickHandler(this.props.champion.key);
     }
     render(){

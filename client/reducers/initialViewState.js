@@ -8,5 +8,6 @@ export default {
         'Support',
         'Marksman'
     ],
-    selectedOption: 'All'
+    selectedOption: 'All',
+    searchValue: ''
 }

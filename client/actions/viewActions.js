@@ -1,16 +1,4 @@
-// let viewActions = {
-//     filterChampions: function(selectOption){
-//         return {
-//             type: 'FILTER_CHAMPIONS',
-//             data: selectOption
-//         }
-//     }
-// }
-//
-// export default viewActions;
-
 export function filterChampions(selectOption){
-    console.log(selectOption);
     return{
         type: 'FILTER_CHAMPIONS',
         data: selectOption
@@ -18,9 +6,15 @@ export function filterChampions(selectOption){
 }
 
 export function selectChampion(champName){
-    console.log(champName);
     return{
         type: 'SELECT_CHAMPION',
         data: champName
+    }
+}
+
+export function searchChampions(searchValue){
+    return{
+        type: 'SEARCH_CHAMPIONS',
+        data: searchValue
     }
 }
