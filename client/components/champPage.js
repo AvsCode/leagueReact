@@ -79,27 +79,29 @@ class ChampPage extends React.Component{
         }
         return(
             <div>
-                <ChampSelector change={this.filterChamps} options={this.props.view.selectOptions}/>
-                <ChampSearch change={this.searchChamps} />
-                    <div id='champContainer'>
-                        {this.buildChamps()}
-                    </div>
+                <div className='champNav'>
+                    <ChampSelector change={this.filterChamps} options={this.props.view.selectOptions}/>
+                    <ChampSearch change={this.searchChamps} />
                 </div>
-            );
-        }
+                <div className='champContainer'>
+                    {this.buildChamps()}
+                </div>
+            </div>
+        );
     }
-    function mapStateToProps(state, ownProps){
-        return {
-            champions : state.champions.champions,
-            champNames: state.champions.champNames,
-            view: state.view
-        };
-    }
+}
+function mapStateToProps(state, ownProps){
+    return {
+        champions : state.champions.champions,
+        champNames: state.champions.champNames,
+        view: state.view
+    };
+}
 
-    function mapDispatchToProps(dispatch){
-        return {
-            actions: bindActionCreators({ filterChampions, selectChampion, searchChampions }, dispatch)
-        };
-    }
+function mapDispatchToProps(dispatch){
+    return {
+        actions: bindActionCreators({ filterChampions, selectChampion, searchChampions }, dispatch)
+    };
+}
 
-    export default connect(mapStateToProps, mapDispatchToProps)(ChampPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ChampPage);

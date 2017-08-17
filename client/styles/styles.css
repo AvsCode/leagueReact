@@ -29,6 +29,11 @@ body{
 .nav a:hover{
     background-color: gray;
 }
+.champNav{
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 .champSelector{
     display: inline-block;
 }
@@ -38,9 +43,19 @@ body{
 }
 .champSearch{
     display: inline-block;
+    height: 22px;
+    vertical-align: top;
+    margin-left: 70px;
+    font-size: 20px;
     color: white;
 }
-#champContainer {
+.champSearch input{
+    color: white;
+    margin-bottom: 10px;
+    height: 20px;
+    vertical-align: top;
+}
+.champContainer{
   width: 95%;
   margin: 0 auto;
 }
@@ -50,8 +65,8 @@ body{
     width: 200px;
     margin: 10px 10px;
     vertical-align: top;
-    background-color: #312b90;
-    border: 2px solid white;
+    background-color: #365075;
+    border: 2px solid #8a6f6f;
     border-radius: 5px;
     box-shadow: 0 0 15px white;
 }

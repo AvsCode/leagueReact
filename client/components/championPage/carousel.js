@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class Carousel extends React.Component{
     constructor(props){
         super(props);
-        this.state = Object.assign({currentPosition: 0}, props);
+        this.state = {currentPosition: 0};
         this.carouselLeft = this.carouselLeft.bind(this);
         this.carouselRight = this.carouselRight.bind(this);
     }

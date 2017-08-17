@@ -12,7 +12,10 @@ export default class ChampSearch extends React.Component{
     }
     render(){
         return(
-            <input className='champSearch' type='text' placeholder='Search Champions' value={this.props.searchValue} onChange={this.handleChange}></input>
+            <div className='champSearch'>
+                <label>Search: </label>
+                <input type='text' placeholder='Search Champions' value={this.props.searchValue} onChange={this.handleChange}></input>
+            </div>
         )
     }
 }
