@@ -12,8 +12,8 @@ class ChampionPage extends React.Component{
       console.log(this.props);
     return(
         <div className='championContainer'>
-            <Carousel skins={this.props.champion.skins} images={this.props.champion.splashArt}/>
             <h1>{this.props.champion.name}</h1>
+            <Carousel skins={this.props.champion.skins} images={this.props.champion.splashArt}/>
             <ChampionStats stats={this.props.champion.stats} />
         </div>
     );

@@ -98,6 +98,7 @@ body{
 .championContainer{
   width: 1220px;
   margin: 0 auto;
+  position: relative;
 }
 .carousel {
     position: relative;
@@ -105,6 +106,7 @@ body{
 }
 .carousel img{
     z-index: 1;
+    filter: opacity(50%);
 }
 .carouselLeft{
     position: absolute;
@@ -128,4 +130,34 @@ body{
     position: absolute;
     top: 5%;
     background: transparent;
+}
+.championStats{
+  position: absolute;
+  left: 30%;
+  bottom: 20%;
+  background-color: transparent;
+}
+.championStats *{
+  background-color: transparent;
+}
+.championStats p {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+#levelSelector{
+  display: inline-block;
+}
+
+table{
+  border-collapse: collapse;
+  width: 500px;
+  margin: 10px;
+}
+th{
+  width: 166px;
+}
+table, tr{
+  border: 1px solid white;
 }
