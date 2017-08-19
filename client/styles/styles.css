@@ -1,13 +1,13 @@
 *{
     padding: 0;
     margin: 0;
-    background-color: black;
 }
 body{
     width: 100%;
     margin: 0 auto;
     font-family: sans-serif;
     color: white;
+    background-color: rgba(31, 31, 31, 0.93);
 }
 .nav{
     height: 40px;
@@ -39,7 +39,6 @@ body{
 }
 .champSelector *{
     font-size: 20px;
-    color: white;
 }
 .champSearch{
     display: inline-block;
@@ -47,10 +46,8 @@ body{
     vertical-align: top;
     margin-left: 70px;
     font-size: 20px;
-    color: white;
 }
 .champSearch input{
-    color: white;
     margin-bottom: 10px;
     height: 20px;
     vertical-align: top;
@@ -101,12 +98,14 @@ body{
   position: relative;
 }
 .carousel {
+    display: inline-block;
     position: relative;
-    width: 1220px;
+    width: 50%;
+    vertical-align: top;
+    margin-top: 10px;
 }
 .carousel img{
-    z-index: 1;
-    filter: opacity(50%);
+    width: 100%;
 }
 .carouselLeft{
     position: absolute;
@@ -116,6 +115,7 @@ body{
     height: 30px;
     color: white;
     border-radius: 5px;
+    background-color: black;
 }
 .carouselRight{
     position: absolute;
@@ -125,6 +125,7 @@ body{
     height: 30px;
     color: white;
     border-radius: 5px;
+    background-color: black;
 }
 .skinName{
     position: absolute;
@@ -132,9 +133,6 @@ body{
     background: transparent;
 }
 .championStats{
-  position: absolute;
-  left: 30%;
-  bottom: 20%;
   background-color: transparent;
 }
 .championStats *{
@@ -149,7 +147,6 @@ body{
 #levelSelector{
   display: inline-block;
 }
-
 table{
   border-collapse: collapse;
   width: 500px;
@@ -160,4 +157,9 @@ th{
 }
 table, tr{
   border: 1px solid white;
+}
+#championInfo{
+    display: inline-block;
+    margin-left: 20px;
+    width: 40%;
 }

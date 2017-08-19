@@ -97,13 +97,11 @@ export default class ChampionStats extends React.Component{
           </table>
         )
     }
-
     handleSlideChange(e){
       this.setState(Object.assign(this.state, {displayLevel: e.target.value}));
     }
     handleLevelChange(e){
       this.setState(Object.assign(this.state, {currentLevel: this.state.displayLevel}));
-      console.log(this.state);
     }
     buildStats(){
         let keys = Object.keys(this.props.stats);
@@ -112,6 +110,7 @@ export default class ChampionStats extends React.Component{
         });
     }
     render(){
+        console.log(this.props, this.state);
         return(
             <div className='championStats'>
               <input id='levelSelector' onChange={this.handleSlideChange} onMouseUp={this.handleLevelChange} type='range' min='1' max='18' step='1' defaultValue='1'/>
