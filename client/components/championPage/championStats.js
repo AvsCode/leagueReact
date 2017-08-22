@@ -110,7 +110,6 @@ export default class ChampionStats extends React.Component{
         });
     }
     render(){
-        console.log(this.props, this.state);
         return(
             <div className='championStats'>
               <input id='levelSelector' onChange={this.handleSlideChange} onMouseUp={this.handleLevelChange} type='range' min='1' max='18' step='1' defaultValue='1'/>
