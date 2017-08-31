@@ -15,7 +15,7 @@ export default class Champ extends React.Component{
     }
     render(){
         return (
-            <Link to='/champion'>
+            <Link to={`/champion/${this.props.name}`}>
                 <div onClick={this.handleChange} className={'champion ' + this.props.tags[0].toLowerCase()}>
                     <img src={this.props.image} />
                     <p className='briefDescription'>{this.props.name}</p>

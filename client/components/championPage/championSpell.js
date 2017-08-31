@@ -11,7 +11,9 @@ export default class ChampionSpell extends React.Component{
           spell.displayTooltip = this.spell.sanitizedTooltip.replace(/{{ e([1-9]) }}/g, ($1, $2) => {
             return (`(${spell.effectBurn[$2]})`);
           });
-
+          if(!spell.vars){
+            return;
+          }
           spell.displayTooltip = spell.displayTooltip.replace(/{{ (a[1-9]) }}/g, ($1, $2) => {
             for(let i = 0; i < spell.vars.length; i++){
               if(spell.vars[i].key === $2){
@@ -19,6 +21,19 @@ export default class ChampionSpell extends React.Component{
               }
             }
           });
+          // need to look through the vars link prop to see if it is an array
+            spell.displayTooltip = spell.displayTooltip.replace(/{{ (f[1-9]) }}/g, ($1, $2) => {
+              let match = false;
+              for(let i = 0; i < spell.vars.length; i++){
+                if(spell.vars[i].key === $2){
+                  match = true;
+                  return(`${spell.vars[i].coeff[0]} x ${spell.vars[i].link}`);
+                }
+              }
+              if(!match){
+                return(' ');
+              }
+            });
       }
     render(){
         console.log(this.props);
@@ -34,3 +49,7 @@ export default class ChampionSpell extends React.Component{
         )
     }
 }
+
+
+// Need to search for < and capture until the second >
+// Is there a way to capture both inside and outside the matches to place in an array?

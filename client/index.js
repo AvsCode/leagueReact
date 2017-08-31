@@ -22,7 +22,7 @@ ReactDOM.render(
                 <Nav />
                 <Route exact={true} path="/" component={champPage} />
                 <Route path="/items" component={itemPage }/>
-                <Route path='/champion' component={championPage} />
+                <Route path='/champion/:id' component={championPage} />
             </div>
         </BrowserRouter>
     </Provider>,

@@ -14,15 +14,22 @@ class ChampionPage extends React.Component{
   sanitizeLore(){
       this.sanitizedLore = this.props.champion.lore.replace(/(<br>)/g, ' ');
   }
+  buildSpells(){
+    return this.props.champion.spells.map((spell) => {
+      return <ChampionSpell spell={spell} key={spell.name}/>
+    });
+  }
   render(){
       this.sanitizeLore();
       console.log(this.props);
     return(
         <div className='championContainer'>
             <Carousel skins={this.props.champion.skins} images={this.props.champion.splashArt}/>
-            <ChampionInfo name={this.props.champion.name}  title={this.props.champion.title} info={this.props.champion.info} lore={this.sanitizedLore}/>
+            <ChampionInfo name={this.props.champion.name}  title={this.props.champion.title} info={this.props.champion.info} lore={this.sanitizedLore} blurb={this.props.champion.blurb}/>
             <ChampionStats stats={this.props.champion.stats} />
-            <ChampionSpell spell={this.props.champion.spells[0]} />
+            <div className='spellContainer'>
+              {this.buildSpells()}
+            </div>
         </div>
     );
   }

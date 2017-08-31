@@ -7,7 +7,7 @@ body{
     margin: 0 auto;
     font-family: sans-serif;
     color: white;
-    background-color: rgba(31, 31, 31, 0.93);
+    background: linear-gradient(to right, #303b71, #1b7c42);
 }
 .nav{
     height: 40px;
@@ -92,17 +92,20 @@ body{
     text-align: center;
     color: white;
 }
+
+/* Champion Page*/
 .championContainer{
   width: 1220px;
   margin: 0 auto;
   position: relative;
 }
-.carousel {
+.carousel{
     display: inline-block;
     position: relative;
     width: 50%;
     vertical-align: top;
     margin-top: 10px;
+    margin-left: 10px;
 }
 .carousel img{
     width: 100%;
@@ -129,8 +132,12 @@ body{
 }
 .skinName{
     position: absolute;
+    margin-left: 10px;
     top: 5%;
     background: transparent;
+}
+.championTypeStats{
+  margin-top: 10px;
 }
 .championStats{
   background-color: transparent;
@@ -144,7 +151,10 @@ body{
   vertical-align: top;
   margin-left: 10px;
 }
-#levelSelector{
+.championStatsLevelSlider{
+  margin-left: 10px;
+}
+.levelSelector{
   display: inline-block;
 }
 table{
@@ -156,10 +166,26 @@ th{
   width: 166px;
 }
 table, tr{
-  border: 1px solid white;
+  border: 2px solid white;
 }
-#championInfo{
+td{
+  padding: 2px 5px;
+}
+.championInfo{
     display: inline-block;
     margin-left: 20px;
     width: 40%;
+}
+.spellContainer{
+  width: 100%;
+  margin-top: 10px;
+}
+.championSpell{
+      display: inline-block;
+      margin: 10px;
+      padding: 5px;
+      width: 45%;
+      vertical-align: top;
+      background-color: #534c67;
+      border: 2px solid #a8a3a3;
 }
