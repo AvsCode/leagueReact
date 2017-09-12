@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TableHead from '../genericComponents/tableHead.jsx';
+import TableRow from '../genericComponents/tableRow.jsx';
 
 export default class ChampionStats extends React.Component{
     constructor(props){
@@ -23,79 +25,23 @@ export default class ChampionStats extends React.Component{
                     <th>Base Stats</th>
                     <th>Stats at level: {this.state.currentLevel}</th>
                   </tr>
-                  <tr>
-                      <th>Attack</th>
-                      <th></th>
-                      <th></th>
-                  </tr>
-                  <tr>
-                      <td>Attack Damage: </td>
-                      <td>{stats.attackdamage.toFixed(2)} (+{stats.attackdamageperlevel.toFixed(2)})</td>
-                      <td>{(stats.attackdamage + stats.attackdamageperlevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
-                  <tr>
-                      <td>Attack Speed: </td>
-                      <td>{ attackSpeed.toFixed(2) } (+{attackSpeedPerLevel.toFixed(2)})</td>
-                      <td>{(attackSpeed + attackSpeedPerLevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
-                  <tr>
-                      <td>Attack Range: </td>
-                      <td>{stats.attackrange} </td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>Critical Strike: </td>
-                      <td>{stats.crit} (+{stats.critperlevel})</td>
-                      <td>{(stats.crit + stats.critperlevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
-                  <tr>
-                      <th>Defense</th>
-                      <th></th>
-                      <th></th>
-                  </tr>
-                  <tr>
-                      <td>HP: </td>
-                      <td>{stats.hp} (+{stats.hpperlevel})</td>
-                      <td>{(stats.hp + stats.hpperlevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
-                  <tr>
-                      <td>HP Regen: </td>
-                      <td>{stats.hpregen.toFixed(2)} (+{stats.hpregenperlevel})</td>
-                      <td>{(stats.hpregen + stats.hpregenperlevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
-                  <tr>
-                      <td>Armor: </td>
-                      <td>{stats.armor} (+{stats.armorperlevel})</td>
-                      <td>{(stats.armor + stats.armorperlevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
-                  <tr>
-                      <td>Magic Resist: </td>
-                      <td>{stats.spellblock} (+{stats.spellblockperlevel})</td>
-                      <td>{(stats.spellblock + stats.spellblockperlevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
-                  <tr>
-                      <th>Utility</th>
-                      <th></th>
-                      <th></th>
-                  </tr>
-                  <tr>
-                      <td>Move Speed: </td>
-                      <td>{stats.movespeed}</td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>MP: </td>
-                      <td>{stats.mp} (+{stats.mpperlevel})</td>
-                      <td>{(stats.mp + stats.mpperlevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
-                  <tr>
-                      <td>MP Regen:</td>
-                      <td>{stats.mpregen} (+{stats.mpregenperlevel})</td>
-                      <td>{(stats.mpregen + stats.mpregenperlevel * levelMultiplier).toFixed(2)}</td>
-                  </tr>
+                    <TableHead headTitle={'Attack'} />
+                        <TableRow stat={'Attack Damage'} statValue={stats.attackdamage} perLevel={stats.attackdamageperlevel} levelMultiplier={levelMultiplier} />
+                        <TableRow stat={'Attack Speed'} statValue={attackSpeed} perLevel={attackSpeedPerLevel} levelMultiplier={levelMultiplier} />
+                        <TableRow stat={'Attack Range'} statValue={stats.attackRange} />
+                        <TableRow stat={'Critical Strike'} statValue={stats.crit} perLevel={stats.critperlevel} levelMultiplier={levelMultiplier} />
+                    <TableHead headTitle={'Defense'} />
+                        <TableRow stat={'HP'} statValue={stats.hp} perLevel={stats.hpperlevel} levelMultiplier={levelMultiplier}/>
+                        <TableRow stat={'HP Regen'} statValue={stats.hpregen} perLevel={stats.hpregenperlevel} levelMultiplier={levelMultiplier} />
+                        <TableRow stat={'Armor'} statValue={stats.armor} perLevel={stats.armorperlevel} levelMultiplier={levelMultiplier} />
+                        <TableRow stat={'Magic Resist'} statValue={stats.spellblock} perLevel={stats.spellblockperlevel} levelMultiplier={levelMultiplier} />
+                    <TableHead headTitle={'Utility'} />
+                        <TableRow stat={'Move Speed'} statValue={stats.movespeed} />
+                        <TableRow stat={'MP'} statValue={stats.mpperlevel} perLevel={stats.mpperlevel} levelMultiplier={levelMultiplier} />
+                        <TableRow stat={'MP Regen'} statValue={stats.mpregen} perLevel={stats.mpregenperlevel} levelMultiplier={levelMultiplier} />
               </tbody>
           </table>
-        )
+        );
     }
     handleSlideChange(e){
       this.setState(Object.assign(this.state, {displayLevel: e.target.value}));

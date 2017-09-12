@@ -10,19 +10,15 @@ import ChampSearch from './champPage/champSearch';
 class ChampPage extends React.Component{
     constructor(props){
         super(props);
-        this.StateFlagger = false;
+        this.stateFlagger = false;
         this.selectChamp =  this.selectChamp.bind(this);
         this.filterChamps = this.filterChamps.bind(this);
         this.searchChamps = this.searchChamps.bind(this);
     }
     checkState(){
-        if(this.props.champions){
-            this.StateFlagger = true;
-        }
-        else{
-            this.StateFlagger = false;
-        }
+        this.stateFlagger = this.props.champions ? true : false;
     }
+
     buildChamps(){
         this.props.champNames.sort();
         let filteredInput = this.filterByInput(this.props.champNames, this.props.view.searchValue);
@@ -48,13 +44,10 @@ class ChampPage extends React.Component{
         for(let i = 0; i < arr.length; i++){
             let tempString = arr[i];
             let match = true;
-            let k = 0;
-            while(k < input.length && match){
+            for(let k = 0; k < input.length && match; k++){
                 if(tempString[k].toUpperCase() != input[k].toUpperCase()){
                     match = false;
-                }
-                else{
-                    k++;
+                    break;
                 }
             }
             if(match){
@@ -74,7 +67,7 @@ class ChampPage extends React.Component{
     }
     render(){
         this.checkState();
-        if(!this.StateFlagger){
+        if(!this.stateFlagger){
             return(<div></div>)
         }
         return(
