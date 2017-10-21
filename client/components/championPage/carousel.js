@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../styles/carousel.css';
 
 export default class Carousel extends React.Component{
     constructor(props){
@@ -29,10 +30,10 @@ export default class Carousel extends React.Component{
     render(){
         return(
             <div className='carousel'>
-                <h2 className='skinName'>{this.props.skins[this.state.currentPosition].name} Skin</h2>
+                <h2 className='carouselSkinName'>{this.props.skins[this.state.currentPosition].name} Skin</h2>
                 <img src={this.props.images[this.state.currentPosition]} />
-                <button className='carouselLeft'onClick={this.carouselLeft}>Previous</button>
-                <button className='carouselRight'onClick={this.carouselRight}>Next</button>
+                <button className='carouselButton carouselLeft'onClick={this.carouselLeft}>Previous</button>
+                <button className='carouselButton carouselRight'onClick={this.carouselRight}>Next</button>
             </div>
         )
     }

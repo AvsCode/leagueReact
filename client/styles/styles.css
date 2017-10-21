@@ -1,26 +1,30 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: "Arial", sans-serif;
 }
 body{
-    width: 100%;
+    width: 900px;
     margin: 0 auto;
     font-family: sans-serif;
     color: white;
-    background: linear-gradient(to right, #303b71, #1b7c42);
+    background-color: #3b3773;
 }
 .nav{
-    height: 40px;
-    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    height: 50px;
+    width: 900px;
     background-color: lightgray;
     color: white;
 }
 .nav a{
-    line-height: 35px;
+    line-height: 50px;
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 20px;
-    padding-bottom: 12px;
+    padding-bottom: 14px;
     font-size: 20px;
     text-decoration: none;
     background-color: lightgray;
@@ -29,13 +33,24 @@ body{
 .nav a:hover{
     background-color: gray;
 }
+.champPage{
+    width: 900px;
+    background-color: gray;
+}
 .champNav{
-    height: 30px;
+    position: fixed;
+    top: 50px;
+    height: 50px;
+    width: 900px;
+    background-color: lightgray;
+    box-shadow: 0 3px 2px -2px black;
+}
+.champNav > *{
     margin-top: 10px;
-    margin-left: 10px;
 }
 .champSelector{
     display: inline-block;
+    margin-left: 20px;
 }
 .champSelector *{
     font-size: 20px;
@@ -53,8 +68,9 @@ body{
     vertical-align: top;
 }
 .champContainer{
-  width: 95%;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 100px;
+  margin-left: auto;
 }
 .champion *{
     background-color: transparent;
@@ -95,49 +111,8 @@ body{
 
 /* Champion Page*/
 .championContainer{
-  width: 1220px;
   margin: 0 auto;
   position: relative;
-}
-.carousel{
-    display: inline-block;
-    position: relative;
-    width: 50%;
-    vertical-align: top;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-.carousel img{
-    width: 100%;
-}
-.carouselLeft{
-    position: absolute;
-    left: 5%;
-    bottom: 45%;
-    width: 60px;
-    height: 30px;
-    color: white;
-    border-radius: 5px;
-    background-color: black;
-}
-.carouselRight{
-    position: absolute;
-    right: 5%;
-    bottom: 45%;
-    width: 60px;
-    height: 30px;
-    color: white;
-    border-radius: 5px;
-    background-color: black;
-}
-.skinName{
-    position: absolute;
-    margin-left: 10px;
-    top: 5%;
-    background: transparent;
-}
-.championTypeStats{
-  margin-top: 10px;
 }
 .championStats{
   background-color: transparent;
@@ -170,11 +145,6 @@ table, tr{
 }
 td{
   padding: 2px 5px;
-}
-.championInfo{
-    display: inline-block;
-    margin-left: 20px;
-    width: 40%;
 }
 .spellContainer{
   width: 100%;
