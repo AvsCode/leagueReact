@@ -9,7 +9,7 @@ import itemPage from './components/itemPage.js';
 import championPage from './components/championPage.js';
 import configureStore from './store/configureStore.js';
 import asyncActions from './actions/asyncActions.js';
-import css from './styles/styles.css';
+import './styles/styles.css';
 
 const store = configureStore({});
 

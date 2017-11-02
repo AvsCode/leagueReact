@@ -32,7 +32,6 @@ export default class ChampionSpell extends React.Component{
             });
       }
     render(){
-        console.log(this.props);
         return(
             <div className='championSpell'>
                 <h3>{this.spell.name}</h3>

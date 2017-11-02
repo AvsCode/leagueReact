@@ -71,7 +71,7 @@ class ChampPage extends React.Component{
             return(<div></div>)
         }
         return(
-            <div>
+            <div className='champPage'>
                 <div className='champNav'>
                     <ChampSelector change={this.filterChamps} options={this.props.view.selectOptions}/>
                     <ChampSearch change={this.searchChamps} />

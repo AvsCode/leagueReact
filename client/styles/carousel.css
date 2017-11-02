@@ -1,0 +1,43 @@
+.carousel{
+    display: inline-block;
+    position: relative;
+    margin-top: 80px;
+    width: 100%;
+    vertical-align: top;
+}
+.carouselSkinName{
+    text-align: center;
+}
+.carousel img{
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #823788;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+.carouselButton{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+.carouselLeft{
+    left: 5%;
+    bottom: 45%;
+}
+.carouselRight{
+    right: 5%;
+    bottom: 45%;
+}
+.skinName{
+    position: absolute;
+    margin-left: 10px;
+    top: 5%;
+    background: transparent;
+}
