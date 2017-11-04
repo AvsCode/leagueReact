@@ -13,14 +13,20 @@ export default class ChampionInfo extends React.Component{
       });
     }
     render(){
+        // return(
+        //     <div className='championInfo'>
+        //         <h1>{this.props.name} {this.props.title}</h1>
+        //         <p>{this.props.blurb}</p>
+        //         <div className='championTypeStats'>
+        //           <h3>Champion Type Stats: </h3>
+        //           { this.buildInfo() }
+        //         </div>
+        //     </div>
+        // )
         return(
             <div className='championInfo'>
                 <h1>{this.props.name} {this.props.title}</h1>
                 <p>{this.props.blurb}</p>
-                <div className='championTypeStats'>
-                  <h3>Champion Type Stats: </h3>
-                  { this.buildInfo() }
-                </div>
             </div>
         )
     }

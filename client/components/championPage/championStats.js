@@ -59,7 +59,7 @@ export default class ChampionStats extends React.Component{
         return(
             <div className='championStats'>
               <div className='championStatsLevelSlider'>
-                <input className='levelSelector' onChange={this.handleSlideChange} onMouseUp={this.handleLevelChange} type='range' min='1' max='18' step='1' defaultValue='1'/>
+                <input className='levelSelector' onChange={this.handleSlideChange} onMouseUp={this.handleLevelChange} onTouchEnd={this.handleLevelChange}type='range' min='1' max='18' step='1' defaultValue='1'/>
                 <p>Current Level: {this.state.displayLevel}</p>
               </div>
               {this.stats()}

@@ -71,6 +71,7 @@ body{
   width: 100%;
   margin-top: 100px;
   margin-left: auto;
+  background-color: #365075;
 }
 .champion *{
     background-color: transparent;
@@ -113,6 +114,7 @@ body{
 .championContainer{
   margin: 0 auto;
   position: relative;
+  background-color: #365075;
 }
 .championStats{
   background-color: transparent;
@@ -150,13 +152,32 @@ td{
   width: 100%;
   margin-top: 10px;
 }
+.spellContainer h2{
+    margin-left: 10px;
+}
 .championSpell{
       display: inline-block;
       margin: 10px;
       padding: 5px;
-      width: 45%;
+      width: 96%;
       vertical-align: top;
       background-color: #38286f;
       border: 3px solid #a8a3a3;
       border-radius: 5px;
+}
+.championSpellImageTitleContainer{
+    position: relative;
+    height: 80px;
+}
+.championSpellImageTitleContainer h3, h4{
+    display: inline-block;
+    margin-left: 100px;
+}
+.championSpellImageTitleContainer img{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.championSpellTextContainer{
+    margin: 10px;
 }

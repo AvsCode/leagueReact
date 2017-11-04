@@ -34,12 +34,17 @@ export default class ChampionSpell extends React.Component{
     render(){
         return(
             <div className='championSpell'>
-                <h3>{this.spell.name}</h3>
-                <h4>{this.spell.sanitizedDescription}</h4>
-                <div>Cost: {this.spell.costBurn} {this.spell.costType}</div>
-                <div>Range: {this.spell.rangeBurn}</div>
-                <div>Cooldown (Seconds): {this.spell.cooldownBurn}</div>
-                <div>{this.spell.displayTooltip}</div>
+                <div className='championSpellImageTitleContainer'>
+                    <img src={`https://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/${this.spell.image.full}`}></img>
+                    <h3>{this.spell.name}</h3>
+                    <h4>{this.spell.sanitizedDescription}</h4>
+                </div>
+                <div className='championSpellTextContainer'>
+                    <p>Cost: {this.spell.costBurn} {this.spell.costType}</p>
+                    <p>Range: {this.spell.rangeBurn}</p>
+                    <p>Cooldown (Seconds): {this.spell.cooldownBurn}</p>
+                    <p>{this.spell.displayTooltip}</p>
+                </div>
             </div>
         )
     }
