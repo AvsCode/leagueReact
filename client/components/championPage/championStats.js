@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TableHead from '../genericComponents/tableHead.jsx';
 import TableRow from '../genericComponents/tableRow.jsx';
+import '../../styles/championStats.css';
 
 export default class ChampionStats extends React.Component{
     constructor(props){
@@ -20,21 +21,17 @@ export default class ChampionStats extends React.Component{
         return(
             <table>
                 <tbody>
-                  <tr>
-                    <th>Category</th>
-                    <th>Base Stats</th>
-                    <th>Stats at level: {this.state.currentLevel}</th>
-                  </tr>
-                    <TableHead headTitle={'Attack'} />
+                    <TableHead headTitle={'Attack'} headTitle2={'Base Stats'} headTitle3={`Stats at level: ${this.state.currentLevel}`}/>
                         <TableRow stat={'Attack Damage'} statValue={stats.attackdamage} perLevel={stats.attackdamageperlevel} levelMultiplier={levelMultiplier} />
                         <TableRow stat={'Attack Speed'} statValue={attackSpeed} perLevel={attackSpeedPerLevel} levelMultiplier={levelMultiplier} />
-                        <TableRow stat={'Attack Range'} statValue={stats.attackRange} />
                         <TableRow stat={'Critical Strike'} statValue={stats.crit} perLevel={stats.critperlevel} levelMultiplier={levelMultiplier} />
+                        <TableRow />
                     <TableHead headTitle={'Defense'} />
                         <TableRow stat={'HP'} statValue={stats.hp} perLevel={stats.hpperlevel} levelMultiplier={levelMultiplier}/>
                         <TableRow stat={'HP Regen'} statValue={stats.hpregen} perLevel={stats.hpregenperlevel} levelMultiplier={levelMultiplier} />
                         <TableRow stat={'Armor'} statValue={stats.armor} perLevel={stats.armorperlevel} levelMultiplier={levelMultiplier} />
                         <TableRow stat={'Magic Resist'} statValue={stats.spellblock} perLevel={stats.spellblockperlevel} levelMultiplier={levelMultiplier} />
+                        <TableRow />
                     <TableHead headTitle={'Utility'} />
                         <TableRow stat={'Move Speed'} statValue={stats.movespeed} />
                         <TableRow stat={'MP'} statValue={stats.mpperlevel} perLevel={stats.mpperlevel} levelMultiplier={levelMultiplier} />
@@ -58,11 +55,13 @@ export default class ChampionStats extends React.Component{
     render(){
         return(
             <div className='championStats'>
-              <div className='championStatsLevelSlider'>
-                <input className='levelSelector' onChange={this.handleSlideChange} onMouseUp={this.handleLevelChange} onTouchEnd={this.handleLevelChange}type='range' min='1' max='18' step='1' defaultValue='1'/>
-                <p>Current Level: {this.state.displayLevel}</p>
+              <div className='championStatsTableContainer'>
+                {this.stats()}
+                <div className='championStatsLevelSlider'>
+                    <p className='levelDisplay'>Current Level: <span className={'championStatsTablePerLevel'}>{this.state.displayLevel}</span></p>
+                    <input className='levelSelector' onChange={this.handleSlideChange} onMouseUp={this.handleLevelChange} onTouchEnd={this.handleLevelChange}type='range' min='1' max='18' step='1' defaultValue='1'/>
+                </div>
               </div>
-              {this.stats()}
             </div>
         )
     }

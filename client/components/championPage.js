@@ -29,7 +29,6 @@ class ChampionPage extends React.Component {
     render() {
         this.sanitizeLore();
         this.buildSkinNames();
-        console.log(this.props);
         return (
             <div className='championContainer'>
                 <Carousel skins={this.props.champion.skins} images={this.props.champion.splashArt} />

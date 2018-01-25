@@ -40,16 +40,12 @@ export default class ChampionSpell extends React.Component{
                     <h4>{this.spell.sanitizedDescription}</h4>
                 </div>
                 <div className='championSpellTextContainer'>
-                    <p>Cost: {this.spell.costBurn} {this.spell.costType}</p>
-                    <p>Range: {this.spell.rangeBurn}</p>
-                    <p>Cooldown (Seconds): {this.spell.cooldownBurn}</p>
-                    <p>{this.spell.displayTooltip}</p>
+                    <p><span>Cost: </span>{this.spell.costBurn} {this.spell.costType === 'No Cost' ? ' ' : this.spell.costType}</p>
+                    <p><span>Range: </span>{this.spell.rangeBurn}</p>
+                    <p><span>Cooldown (Seconds): </span>{this.spell.cooldownBurn}</p>
+                    <p><span>Description: </span>{this.spell.displayTooltip}</p>
                 </div>
             </div>
         )
     }
 }
-
-
-// Need to search for < and capture until the second >
-// Is there a way to capture both inside and outside the matches to place in an array?

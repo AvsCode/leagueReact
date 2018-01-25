@@ -1,12 +1,21 @@
 import React from 'react';
 
 const TableRow = (props) => {
+    if(!props.stat){
+        return (
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        );
+    }
     if(typeof(props.levelMultiplier) === 'number'){
         return(
             <tr>
                 <td>{props.stat}: </td>
-                <td>{props.statValue.toFixed(2)} + ({props.perLevel.toFixed(2)})</td>
-                <td>{(props.statValue + props.perLevel * props.levelMultiplier).toFixed(2)}</td>
+                <td>{props.statValue.toFixed(2)} <span className={'championStatsTablePerLevel'}> + ({props.perLevel.toFixed(2)})</span></td>
+                <td className={'championStatsTablePerLevel'}>{(props.statValue + props.perLevel * props.levelMultiplier).toFixed(2)}</td>
             </tr>
         );
     }

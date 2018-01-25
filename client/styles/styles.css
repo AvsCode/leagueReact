@@ -8,7 +8,7 @@ body{
     margin: 0 auto;
     font-family: sans-serif;
     color: white;
-    background-color: #3b3773;
+    background-color: #365075;
 }
 .nav{
     position: fixed;
@@ -17,7 +17,6 @@ body{
     height: 50px;
     width: 900px;
     background-color: lightgray;
-    color: white;
 }
 .nav a{
     line-height: 50px;
@@ -28,7 +27,7 @@ body{
     font-size: 20px;
     text-decoration: none;
     background-color: lightgray;
-    color: white;
+    color: black;
 }
 .nav a:hover{
     background-color: gray;
@@ -51,6 +50,7 @@ body{
 .champSelector{
     display: inline-block;
     margin-left: 20px;
+    color: black;
 }
 .champSelector *{
     font-size: 20px;
@@ -61,6 +61,7 @@ body{
     vertical-align: top;
     margin-left: 70px;
     font-size: 20px;
+    color: black;
 }
 .champSearch input{
     margin-bottom: 10px;
@@ -68,10 +69,10 @@ body{
     vertical-align: top;
 }
 .champContainer{
-  width: 100%;
-  margin-top: 100px;
-  margin-left: auto;
-  background-color: #365075;
+    width: 100%;
+    margin-top: 100px;
+    margin-left: auto;
+    background-color: #365075;
 }
 .champion *{
     background-color: transparent;
@@ -82,10 +83,11 @@ body{
     width: 200px;
     margin: 10px 10px;
     vertical-align: top;
-    background-color: #365075;
+    /* background-color: #365075; */
+    background-color: lightgray;
     border: 2px solid #8a6f6f;
     border-radius: 5px;
-    box-shadow: 0 0 15px white;
+    box-shadow: 0 0 5px white;
 }
 .champion:hover{
     box-shadow: inset 0 0 15px white;
@@ -103,67 +105,37 @@ body{
 .briefDescription{
     text-align: center;
     font-size: 18px;
-    color: white;
+    color: #1010d3;
+    font-weight: 600;
 }
 .championTags{
     text-align: center;
-    color: white;
+    color: black;
+    font-weight: 100;
 }
 
 /* Champion Page*/
 .championContainer{
-  margin: 0 auto;
-  position: relative;
-  background-color: #365075;
-}
-.championStats{
-  background-color: transparent;
-}
-.championStats *{
-  background-color: transparent;
-}
-.championStats p {
-  display: inline-block;
-  font-size: 20px;
-  vertical-align: top;
-  margin-left: 10px;
-}
-.championStatsLevelSlider{
-  margin-left: 10px;
-}
-.levelSelector{
-  display: inline-block;
-}
-table{
-  border-collapse: collapse;
-  width: 500px;
-  margin: 10px;
-}
-th{
-  width: 166px;
-}
-table, tr{
-  border: 2px solid white;
-}
-td{
-  padding: 2px 5px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #365075;
 }
 .spellContainer{
-  width: 100%;
-  margin-top: 10px;
+    width: 100%;
+    margin-top: 10px;
 }
 .spellContainer h2{
     margin-left: 10px;
 }
 .championSpell{
-      display: inline-block;
-      margin: 10px;
-      padding: 5px;
-      width: 96%;
-      vertical-align: top;
-      background-color: #38286f;
-      border: 3px solid #a8a3a3;
-      border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    width: 96%;
+    vertical-align: top;
+    background-color: #38286f;
+    border: 3px solid #a8a3a3;
+    border-radius: 5px;
 }
 .championSpellImageTitleContainer{
     position: relative;
@@ -172,12 +144,26 @@ td{
 .championSpellImageTitleContainer h3, h4{
     display: inline-block;
     margin-left: 100px;
+    width: 750px;
+}
+.championSpellImageTitleContainer h3{
+    margin-top: 10px;
+}
+.championSpellImageTitleContainer h4{
+    font-weight: 100;
 }
 .championSpellImageTitleContainer img{
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 10px;
+    top: 10px;
 }
 .championSpellTextContainer{
     margin: 10px;
+    font-weight: 100;
+}
+.championSpellTextContainer span{
+    font-weight: 600;
+}
+.championSpellTextContainer p{
+    margin-top: 5px;
 }

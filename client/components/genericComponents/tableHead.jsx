@@ -4,8 +4,8 @@ const TableHead = (props) => {
     return (
         <tr>
             <th>{props.headTitle} </th>
-            <th></th>
-            <th></th>
+            <th>{props.headTitle2}</th>
+            <th>{props.headTitle3}</th>
         </tr>
     )
 };

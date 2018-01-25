@@ -7,6 +7,7 @@
 }
 .carouselSkinName{
     text-align: center;
+    margin-top: 10px;
 }
 .carousel img{
     width: 600px;
@@ -14,30 +15,31 @@
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    background-color: #823788;
-    border: 1px solid white;
+    background-color: lightgray;
+    border: 1px solid black;
     border-radius: 3px;
 }
 .carouselButton{
     position: absolute;
-    width: 60px;
-    height: 30px;
+    width: 130px;
+    height: 92%;
     border: none;
     border-radius: 5px;
     color: white;
-    background-color: black;
+    background-color: transparent;
+    font-size: xx-large;
+}
+.carouselButton:focus{
+    outline: none;
+}
+.carouselButton:hover{
+    cursor: pointer;
 }
 .carouselLeft{
-    left: 5%;
-    bottom: 45%;
+    left: 0%;
+    bottom: 8%;
 }
 .carouselRight{
-    right: 5%;
-    bottom: 45%;
-}
-.skinName{
-    position: absolute;
-    margin-left: 10px;
-    top: 5%;
-    background: transparent;
+    right: 0%;
+    bottom: 8%;
 }

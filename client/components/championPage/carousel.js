@@ -26,8 +26,8 @@ export default class Carousel extends React.Component{
         return(
             <div className='carousel'>
                 <img src={this.props.images[this.state.currentPosition]} />
-                <button className='carouselButton carouselLeft'onClick={this.changeImage}>Previous</button>
-                <button className='carouselButton carouselRight'onClick={this.changeImage}>Next</button>
+                <button className='carouselButton carouselLeft'onClick={this.changeImage}>&#xab;</button>
+                <button className='carouselButton carouselRight'onClick={this.changeImage}>&#xbb;</button>
                 <h2 className='carouselSkinName'>{this.props.skins[this.state.currentPosition]}</h2>
             </div>
         )
